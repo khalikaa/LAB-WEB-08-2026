@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* 6 Kode Warna HEX Pilihan */
+    --color-1: #FFBB94; /* Warm Peach */
+    --color-2: #FB9590; /* Soft Coral Pink */
+    --color-3: #DC586D; /* Vivid Rose */
+    --color-4: #A33757; /* Deep Rose Velvet */
+    --color-5: #852E4E; /* Wine Red */
+    --color-6: #4C1D3D; /* Dark Plum */
+
+    /* Background Kartu Putih Bersih & Inner Card */
+    --card-white: #FFFFFF;
+    --card-inner-soft: #FFF2EE;
+    
+    /* Warna Teks Utama */
+    --text-title: #3B122F;
+    --text-body: #4A3A45;
+    --text-muted: #7A6372;
+
+    --radius-xl: 28px;
+    --radius-lg: 20px;
+    --radius-md: 14px;
+    --radius-pill: 50px;
+    --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   1. BASE & RESET (Ketentuan 4: Box Model)
+   -------------------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #FAF4F2;
+    color: var(--text-body);
+}
+
+body {
+    line-height: 1.8;
+    padding: 40px 0;
+    position: relative;
+    overflow-x: hidden;
+    
+    /* Layer 1: Gradasi Latar Belakang Mesh Dual-Tone */
+    background-image: 
+        radial-gradient(at 10% 10%, rgba(251, 149, 144, 0.15) 0px, transparent 50%),
+        radial-gradient(at 90% 80%, rgba(133, 46, 78, 0.12) 0px, transparent 50%),
+        radial-gradient(var(--color-3) 1.2px, transparent 1.2px);
+    background-size: 100% 100%, 100% 100%, 36px 36px;
+    background-attachment: fixed;
+}
+
+/* Lingkaran Ambient Glow Kanan Atas */
+body::before {
+    content: '';
+    position: fixed;
+    top: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 187, 148, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Lingkaran Ambient Glow Kiri Bawah */
+body::after {
+    content: '';
+    position: fixed;
+    bottom: -100px;
+    left: -100px;
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, rgba(220, 88, 109, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+hr {
+    display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. TYPOGRAPHY & ELEMENT SELECTORS (Ketentuan 3: Element Selector)
+   -------------------------------------------------------------------------- */
+h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--text-title);
+    margin-bottom: 24px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+/* Garis aksen pelangi di bawah judul */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: linear-gradient(90deg, var(--color-2) 0%, var(--color-3) 100%);
+    border-radius: var(--radius-pill);
+    margin: 10px auto 0 auto;
+    box-shadow: 0 2px 8px rgba(220, 88, 109, 0.3);
+}
+
+p {
+    margin-bottom: 16px;
+    text-align: justify;
+    color: var(--text-body);
+    font-size: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. TAMPILAN KARTU & CLASS SELECTORS (Ketentuan 3: Element & Class Selector)
+   -------------------------------------------------------------------------- */
+/* Menggabungkan 'section' dan '.card-box' agar semua menu tetap berbentuk kartu secara otomatis */
+section, .card-box {
+    background-color: var(--card-white);
+    border-radius: var(--radius-xl);
+    padding: 50px 55px;
+    margin-bottom: 35px;
+    box-shadow: 0 16px 40px rgba(76, 29, 61, 0.07);
+    border: 1px solid rgba(220, 88, 109, 0.18);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+section::before, .card-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--color-2) 0%, var(--color-4) 100%);
+}
+
+section:hover, .card-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 50px rgba(133, 46, 78, 0.15);
+}
+
+section > h2, .card-box > h2 {
+    display: block;
+    text-align: center;
+}
+
+/* Class Selectors Tambahan */
+.text-muted {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.btn-submit {
+    padding: 14px 38px;
+    border: none;
+    border-radius: var(--radius-pill);
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+    margin: 10px 6px 0 6px;
+    background: linear-gradient(135deg, var(--color-3) 0%, var(--color-5) 100%);
+    color: #FFFFFF;
+    box-shadow: 0 6px 20px rgba(133, 46, 78, 0.25);
+}
+
+/* Pseudo-class :hover (Ketentuan 6) */
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(133, 46, 78, 0.35);
+}
+
+.btn-reset {
+    padding: 14px 38px;
+    border: none;
+    border-radius: var(--radius-pill);
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+    margin: 10px 6px 0 6px;
+    background-color: #FCE0D8;
+    color: var(--color-5);
+}
+
+.btn-reset:hover {
+    background-color: #F8CEC3;
+}
+
+/* --------------------------------------------------------------------------
+   4. HEADER & NAVIGASI (Ketentuan 5: Flexbox)
+   -------------------------------------------------------------------------- */
+body > table[width="85%"] {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+}
+
+header {
+    background: linear-gradient(135deg, rgba(76, 29, 61, 0.88) 0%, rgba(133, 46, 78, 0.92) 100%), 
+                url('https://i.pinimg.com/1200x/be/96/7a/be967a2c38760cebad41afc853110e43.jpg') center/cover no-repeat;
+    padding: 80px 40px;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 20px 45px rgba(76, 29, 61, 0.18);
+    text-align: center;
+    margin-bottom: 35px;
+    border: 2px solid rgba(255, 187, 148, 0.3);
+}
+
+header p {
+    color: var(--color-1) !important;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 500;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    margin-bottom: 40px;
+}
+
+nav table {
+    border: none !important;
+    background: transparent !important;
+    border-collapse: separate !important;
+}
+
+nav tr {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+nav td {
+    background-color: #FFFFFF !important;
+    border: 1.5px solid rgba(220, 88, 109, 0.3) !important;
+    border-radius: var(--radius-pill);
+    padding: 11px 26px !important;
+    box-shadow: 0 6px 18px rgba(133, 46, 78, 0.08);
+    transition: var(--transition);
+}
+
+nav td:hover {
+    background: linear-gradient(135deg, var(--color-3) 0%, var(--color-5) 100%) !important;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(133, 46, 78, 0.28);
+    border-color: transparent !important;
+}
+
+nav td:hover a {
+    color: #FFFFFF !important;
+}
+
+nav a {
+    color: var(--color-5) !important;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: block;
+    transition: var(--transition);
+}
+
+/* --------------------------------------------------------------------------
+   5. SECTIONS & ID SELECTORS (Ketentuan 3: ID Selector)
+   -------------------------------------------------------------------------- */
+#galeri table {
+    border-collapse: separate !important;
+    border-spacing: 22px 0 !important;
+}
+
+#galeri td {
+    background-color: var(--card-inner-soft) !important;
+    border: 1px solid rgba(251, 149, 144, 0.3) !important;
+    border-radius: var(--radius-lg);
+    padding: 22px !important;
+    transition: var(--transition);
+}
+
+#galeri td:hover {
+    background-color: #FFE6DD !important;
+    transform: translateY(-6px);
+    border-color: var(--color-3) !important;
+    box-shadow: 0 14px 30px rgba(133, 46, 78, 0.12);
+}
+
+#galeri img {
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    margin-bottom: 14px;
+}
+
+#galeri small {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    display: block;
+}
+
+[align="center"] {
+    text-align: center;
+}
+
+#aktivitas ol {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#aktivitas li {
+    background-color: var(--card-inner-soft);
+    padding: 18px 24px;
+    border: none;
+    border-left: 6px solid var(--color-3);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    color: var(--text-title);
+    transition: var(--transition);
+}
+
+#aktivitas li:hover {
+    background-color: #FFE6DD;
+    transform: translateX(10px);
+    border-left-color: var(--color-5);
+}
+
+#detail {
+    overflow-x: auto; /* Memastikan tabel tidak terpotong di HP */
+}
+
+#detail table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1.5px solid var(--color-4) !important;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin: 25px auto;
+    width: 85% !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+#detail tr[bgcolor] {
+    background: linear-gradient(135deg, var(--color-5) 0%, var(--color-4) 100%) !important;
+    color: #FFFFFF;
+}
+
+#detail th {
+    padding: 18px 24px;
+    font-size: 0.98rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#detail th:last-child {
+    border-right: none;
+}
+
+#detail td {
+    padding: 18px 24px;
+    background-color: #FFFFFF;
+    color: var(--text-body);
+    border-bottom: 1px solid rgba(220, 88, 109, 0.15);
+    border-right: 1px solid rgba(220, 88, 109, 0.15);
+}
+
+#detail td:last-child {
+    border-right: none;
+}
+
+#detail tr:hover td {
+    background-color: var(--card-inner-soft);
+}
+
+#formulir {
+    text-align: center;
+}
+
+#formulir > table,
+#formulir form,
+#formulir form > table {
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 680px !important;
+    border: none !important;
+}
+
+#formulir > table {
+    background-color: var(--card-inner-soft) !important;
+    border-radius: var(--radius-lg) !important;
+    border: 1px solid rgba(251, 149, 144, 0.3) !important;
+    box-shadow: 0 10px 30px rgba(133, 46, 78, 0.05);
+    padding: 25px 30px !important;
+}
+
+#formulir td {
+    padding: 10px;
+    border: none !important;
+}
+
+#formulir label {
+    color: var(--text-title);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 14px 20px;
+    border: 1.5px solid #F2C2B8;
+    border-radius: var(--radius-md);
+    outline: none;
+    font-family: inherit;
+    background-color: #FFFFFF;
+    color: var(--text-title);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: var(--color-3);
+    box-shadow: 0 0 0 4px rgba(220, 88, 109, 0.18);
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 14px 38px;
+    border: none;
+    border-radius: var(--radius-pill);
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+    margin: 10px 6px 0 6px;
+}
+
+input[type="submit"] {
+    background: linear-gradient(135deg, var(--color-3) 0%, var(--color-5) 100%);
+    color: #FFFFFF;
+    box-shadow: 0 6px 20px rgba(133, 46, 78, 0.25);
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(133, 46, 78, 0.35);
+}
+
+input[type="reset"] {
+    background-color: #FCE0D8;
+    color: var(--color-5);
+}
+
+input[type="reset"]:hover {
+    background-color: #F8CEC3;
+}
+
+/* --------------------------------------------------------------------------
+   6. MULTIMEDIA & FOOTER
+   -------------------------------------------------------------------------- */
+iframe {
+    border-radius: var(--radius-lg);
+    border: none !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+footer {
+    background: linear-gradient(135deg, var(--color-6) 0%, var(--color-5) 100%);
+    padding: 35px 20px;
+    border-radius: var(--radius-xl);
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(76, 29, 61, 0.15);
+}
+
+footer p {
+    color: var(--color-1) !important;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. RESPONSIVE DESIGN / MEDIA QUERY (Ketentuan 7)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+    body > table[width="85%"] {
+        width: 96% !important;
+    }
+
+    section, .card-box {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #detail table {
+        width: 100% !important;
+    }
+
+    #galeri table, 
+    #galeri tbody, 
+    #galeri tr {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    #galeri td {
+        width: 100% !important;
+    }
+
+    #formulir > table {
+        width: 100% !important;
+    }
+
+    #formulir tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #formulir td {
+        width: 100% !important;
+        text-align: left !important;
+    }
+}

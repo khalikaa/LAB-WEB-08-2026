@@ -1,19 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    /* 6 Kode Warna HEX Pilihan */
     --color-1: #FFBB94; /* Warm Peach */
     --color-2: #FB9590; /* Soft Coral Pink */
     --color-3: #DC586D; /* Vivid Rose */
     --color-4: #A33757; /* Deep Rose Velvet */
     --color-5: #852E4E; /* Wine Red */
     --color-6: #4C1D3D; /* Dark Plum */
-
-    /* Background Kartu Putih Bersih & Inner Card */
     --card-white: #FFFFFF;
     --card-inner-soft: #FFF2EE;
     
-    /* Warna Teks Utama */
     --text-title: #3B122F;
     --text-body: #4A3A45;
     --text-muted: #7A6372;
@@ -25,9 +21,6 @@
     --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* --------------------------------------------------------------------------
-   1. BASE & RESET (Ketentuan 4: Box Model)
-   -------------------------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -47,7 +40,6 @@ body {
     position: relative;
     overflow-x: hidden;
     
-    /* Layer 1: Gradasi Latar Belakang Mesh Dual-Tone */
     background-image: 
         radial-gradient(at 10% 10%, rgba(251, 149, 144, 0.15) 0px, transparent 50%),
         radial-gradient(at 90% 80%, rgba(133, 46, 78, 0.12) 0px, transparent 50%),
@@ -56,7 +48,6 @@ body {
     background-attachment: fixed;
 }
 
-/* Lingkaran Ambient Glow Kanan Atas */
 body::before {
     content: '';
     position: fixed;
@@ -70,7 +61,6 @@ body::before {
     pointer-events: none;
 }
 
-/* Lingkaran Ambient Glow Kiri Bawah */
 body::after {
     content: '';
     position: fixed;
@@ -88,9 +78,6 @@ hr {
     display: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   2. TYPOGRAPHY & ELEMENT SELECTORS (Ketentuan 3: Element Selector)
-   -------------------------------------------------------------------------- */
 h1 {
     font-size: 2.6rem;
     font-weight: 800;
@@ -111,7 +98,6 @@ h2 {
     letter-spacing: -0.5px;
 }
 
-/* Garis aksen pelangi di bawah judul */
 h2::after {
     content: '';
     display: block;
@@ -130,10 +116,6 @@ p {
     font-size: 1rem;
 }
 
-/* --------------------------------------------------------------------------
-   3. TAMPILAN KARTU & CLASS SELECTORS (Ketentuan 3: Element & Class Selector)
-   -------------------------------------------------------------------------- */
-/* Menggabungkan 'section' dan '.card-box' agar semua menu tetap berbentuk kartu secara otomatis */
 section, .card-box {
     background-color: var(--card-white);
     border-radius: var(--radius-xl);
@@ -166,7 +148,6 @@ section > h2, .card-box > h2 {
     text-align: center;
 }
 
-/* Class Selectors Tambahan */
 .text-muted {
     color: var(--text-muted);
     font-size: 0.88rem;
@@ -187,7 +168,6 @@ section > h2, .card-box > h2 {
     box-shadow: 0 6px 20px rgba(133, 46, 78, 0.25);
 }
 
-/* Pseudo-class :hover (Ketentuan 6) */
 .btn-submit:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(133, 46, 78, 0.35);
@@ -210,9 +190,6 @@ section > h2, .card-box > h2 {
     background-color: #F8CEC3;
 }
 
-/* --------------------------------------------------------------------------
-   4. HEADER & NAVIGASI (Ketentuan 5: Flexbox)
-   -------------------------------------------------------------------------- */
 body > table[width="85%"] {
     background: transparent !important;
     border: none !important;
@@ -287,9 +264,6 @@ nav a {
     transition: var(--transition);
 }
 
-/* --------------------------------------------------------------------------
-   5. SECTIONS & ID SELECTORS (Ketentuan 3: ID Selector)
-   -------------------------------------------------------------------------- */
 #galeri table {
     border-collapse: separate !important;
     border-spacing: 22px 0 !important;
@@ -354,7 +328,7 @@ nav a {
 }
 
 #detail {
-    overflow-x: auto; /* Memastikan tabel tidak terpotong di HP */
+    overflow-x: auto; 
 }
 
 #detail table {
@@ -487,9 +461,6 @@ input[type="reset"]:hover {
     background-color: #F8CEC3;
 }
 
-/* --------------------------------------------------------------------------
-   6. MULTIMEDIA & FOOTER
-   -------------------------------------------------------------------------- */
 iframe {
     border-radius: var(--radius-lg);
     border: none !important;
@@ -511,9 +482,6 @@ footer p {
     font-size: 0.95rem;
 }
 
-/* --------------------------------------------------------------------------
-   7. RESPONSIVE DESIGN / MEDIA QUERY (Ketentuan 7)
-   -------------------------------------------------------------------------- */
 @media screen and (max-width: 768px) {
     body > table[width="85%"] {
         width: 96% !important;

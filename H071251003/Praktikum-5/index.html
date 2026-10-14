@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Tugas Tim Marsha</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-200 font-sans text-slate-800 min-h-screen p-4 sm:p-8">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div id="daftarBox" class="bg-white rounded-xl p-4 border-2 border-slate-400 flex flex-col h-fit">
+            <h2 class="text-xl font-bold mb-4 text-slate-700 border-b pb-2 h-full">Daftar Anggota</h2>
+            <div id="loadingAnggota" class="text-slate-500 italic mb-2">Memuat anggota...</div>
+            <div id="errorAnggota" class="text-red-500 text-sm mb-2 hidden"></div>
+            <div id="listNama" class="flex flex-col gap-2">
+            </div>
+        </div class>
+        
+        <div id="hideBtn" class="bg-white w-15 h-fit rounded-xl p-2 border-2 border-slate-400 text-3xl text-slate-700 md:hidden grid justify-center">⇓</div>
+
+        <div class="md:col-span-2 bg-white rounded-xl p-6 border-2 border-slate-400 flex flex-col gap-6">
+            
+            <div>
+                <h2 id="judulTugas" class="text-2xl font-bold text-slate-800">Pilih anggota terlebih dahulu</h2>
+                <p id="ringkasanProgres" class="text-sm text-slate-500 mt-1"></p>
+            </div>
+
+            <div id="loadingTugas" class="text-slate-500 italic hidden">Memuat tugas...</div>
+            <div id="errorTugas" class="text-red-500 text-sm hidden"></div>
+
+            <div id="containerPencarian" class="hidden">
+                <input type="text" id="inputPencarian" placeholder="Cari tugas berdasarkan judul..." 
+                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div id="containerForm" class="hidden border-t pt-4">
+                <h3 class="text-md font-semibold mb-2 text-slate-700">Tambah Tugas Baru</h3>
+                <form id="formTambahTugas" class="flex flex-col gap-2">
+                    <div class="flex gap-2">
+                        <input type="text" id="inputJudulBaru" placeholder="Judul tugas baru (minimal 5 karakter)..." 
+                            class="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button type="submit" id="btnSimpan" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2 rounded-lg transition-colors cursor-pointer">
+                            Simpan
+                        </button>
+                    </div>
+                    <p id="errorForm" class="text-red-500 text-sm hidden"></p>
+                    <p id="notifSukses" class="text-green-600 text-sm hidden">Tugas berhasil ditambahkan.</p>
+                </form>
+            </div>
+
+            <div id="listTugas" class="flex flex-col gap-3">
+            </div>
+            <div id="pesanKosongTugas" class="text-slate-500 italic text-center hidden">Tidak ada tugas yang cocok.</div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

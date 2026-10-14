@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Tugas Tim - Marsha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen text-gray-800 antialiased">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        
+        <header class="mb-8 border-b border-gray-200 pb-5">
+            <h1 class="text-3xl font-bold text-gray-900 tracking-tight">Dashboard Tugas Tim</h1>
+            <p class="text-sm text-gray-500 mt-1">Pantau progres anggota tim dan kelola status tugas harian secara langsung.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <aside class="bg-white p-5 rounded-xl shadow-sm border border-gray-200 h-fit">
+                <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">Daftar Anggota</h2>
+                
+                <div id="status-anggota" class="text-sm font-medium text-gray-500 mb-3"></div>
+                <div id="error-anggota" class="hidden text-sm text-red-600 bg-red-50 p-3 rounded-lg border border-red-200 mb-3"></div>
+
+                <div id="daftar-anggota" class="flex flex-col gap-2"></div>
+            </aside>
+
+            <main class="md:col-span-2 bg-white p-6 rounded-xl border border-gray-200 shadow-sm min-h-[500px]">
+                
+                <div id="tampilan-awal" class="text-center py-24 text-gray-400">
+                    <p class="text-base font-medium">Silakan klik salah satu anggota di sebelah kiri untuk melihat daftar tugas.</p>
+                </div>
+
+                <div id="bagian-tugas" class="hidden flex flex-col gap-5">
+                    
+                    <div class="border-b border-gray-200 pb-4">
+                        <h2 id="judul-tugas-anggota" class="text-2xl font-bold text-gray-900">Tugas Anggota</h2>
+
+                        <div id="wadah-progres" class="hidden mt-3">
+                            <div class="flex items-center justify-between text-sm font-semibold text-indigo-600 mb-1.5">
+                                <span id="teks-progres-tugas"></span>
+                                <span id="persentase-progres" class="text-xs font-bold text-gray-500"></span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
+                                <div id="isi-bar-progres" class="bg-indigo-600 h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="status-tugas" class="hidden text-sm font-medium text-indigo-600"></div>
+                    <div id="error-tugas" class="hidden text-sm text-red-600 bg-red-50 p-3 rounded-lg border border-red-200"></div>
+
+                    <form id="form-tambah-tugas" class="bg-gray-50 p-4 rounded-xl border border-gray-200">
+                        <label for="input-tugas" class="block text-sm font-semibold text-gray-700 mb-2">Tambah Tugas Baru</label>
+                        <div class="flex gap-2">
+                            <input 
+                                type="text" 
+                                id="input-tugas" 
+                                placeholder="Tuliskan judul tugas (minimal 5 karakter)..." 
+                                class="flex-1 px-3.5 py-2 text-sm bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+                            >
+                            <button 
+                                type="submit" 
+                                id="tombol-simpan-tugas" 
+                                class="px-5 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition disabled:opacity-50"
+                            >
+                                Simpan
+                            </button>
+                        </div>
+                        <p id="error-form" class="hidden text-xs text-red-600 mt-2 font-medium"></p>
+                        <p id="sukses-form" class="hidden text-xs text-emerald-600 mt-2 font-medium"></p>
+                    </form>
+
+                    <div>
+                        <input 
+                            type="text" 
+                            id="input-pencarian" 
+                            placeholder="Cari tugas berdasarkan judul..." 
+                            class="w-full px-3.5 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+                        >
+                    </div>
+
+                    <p id="pesan-tidak-cocok" class="hidden text-sm text-center py-4 text-gray-500 italic bg-gray-50 rounded-lg border border-dashed border-gray-300">
+                        Tidak ada tugas yang cocok.
+                    </p>
+
+                    <ul id="daftar-tugas" class="flex flex-col gap-2.5"></ul>
+
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

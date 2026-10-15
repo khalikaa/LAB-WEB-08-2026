@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tugas Tim Marsha</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-900">
+  <div class="mx-auto max-w-5xl p-6">
+    <h1 class="mb-6 text-3xl font-bold">Tugas Tim Marsha</h1>
+
+    <main class="grid gap-6 md:grid-cols-[16rem_1fr]">
+      <aside>
+        <h2 class="mb-3 text-lg font-medium">Anggota tim</h2>
+        <p id="status-anggota" class="text-sm text-slate-600"></p>
+        <p id="error-anggota" class="hidden rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700"></p>
+        <div id="daftar-anggota" class="flex flex-col gap-1"></div>
+      </aside>
+
+      <section class="rounded-2xl bg-white p-6 shadow-sm">
+        <h2 id="judul-tugas" class="text-xl font-bold">Tugas</h2>
+        <p id="placeholder" class="mt-3 text-slate-600">Belum ada anggota yang dipilih.</p>
+
+        <div id="panel-tugas" class="hidden">
+          <form id="form-tugas" class="mt-4" novalidate>
+            <div class="flex gap-2">
+              <input id="input-judul" type="text" autocomplete="off" placeholder="Tugas baru (minimal 5 karakter)"
+                     class="min-w-0 flex-1 rounded-lg border border-slate-300 px-3 py-2" />
+              <button id="btn-simpan" type="submit"
+                      class="rounded-lg bg-teal-700 px-4 py-2 font-medium text-white disabled:opacity-60">Simpan</button>
+            </div>
+            <p id="error-form" class="hidden mt-2 text-sm text-red-700"></p>
+          </form>
+
+          <p id="ringkasan" class="mt-5 text-sm font-medium text-slate-700"></p>
+
+          <input id="cari" type="search" autocomplete="off" placeholder="Cari tugas..."
+                 class="mt-2 w-full rounded-lg border border-slate-300 px-3 py-2" />
+
+          <p id="status-tugas" class="mt-4 text-sm text-slate-600"></p>
+          <p id="error-tugas" class="hidden mt-4 rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700"></p>
+          <ul id="daftar-tugas" class="mt-4 flex flex-col gap-2"></ul>
+          <p id="kosong" class="hidden mt-4 text-slate-600">Tidak ada tugas yang cocok.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="notifikasi" class="hidden fixed bottom-6 right-6 rounded-lg bg-green-200 px-4 py-3 text-sm text-green-900 shadow-lg"></div>
+  <script src="script.js"></script>
+</body>
+</html>

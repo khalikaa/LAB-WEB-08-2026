@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-parchment font-body text-espresso;
+    background-image: radial-gradient(rgba(74, 44, 26, 0.14) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+
+  ::selection {
+    @apply bg-amber text-espresso;
+  }
+}

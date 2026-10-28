@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouthForge - Volunteer & Aksi Remaja Gen Z</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-[#EFE3C3] min-h-screen p-3 sm:p-6 lg:p-8 text-slate-800">
+
+  <!-- (FLOATING BOX) - HAMPIR FULL SCREEN -->
+  <div class="w-full max-w-[1500px] mx-auto bg-white rounded-[2.5rem] shadow-2xl border-2 border-amber-200/60 overflow-hidden">
+
+    <!-- 1. NAVBAR -->
+    <nav class="px-6 sm:px-10 lg:px-14 py-5 bg-white border-b border-amber-100 flex items-center justify-between gap-4">
+      <!-- Logo & Search Bar -->
+      <div class="flex items-center gap-6 lg:gap-10">
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-tr from-orange-500 to-amber-400 text-white flex items-center justify-center font-black text-xl shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform">
+            🚀
+          </div>
+          <span class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+            Youth<span class="text-orange-500">forge.</span>
+          </span>
+        </a>
+
+        <!-- Search Bar -->
+        <div class="hidden md:flex items-center bg-slate-100/80 px-4 py-2.5 rounded-full text-xs lg:text-sm text-slate-500 w-64 lg:w-80 gap-2 border border-slate-200/60 focus-within:ring-2 focus-within:ring-orange-400 transition-all">
+          <span>🔍</span>
+          <input type="text" placeholder="Cari kegiatan volunteer..." class="bg-transparent focus:outline-none w-full text-slate-700 font-medium">
+        </div>
+      </div>
+
+      <!-- Nav Links -->
+      <div class="hidden lg:flex items-center space-x-8 text-base font-bold text-slate-700">
+        <a href="#beranda" class="hover:text-orange-500 transition-colors">Beranda</a>
+        <a href="#tentang" class="hover:text-orange-500 transition-colors">Tentang</a>
+        <a href="#kegiatan" class="hover:text-orange-500 transition-colors">Kegiatan</a>
+        <a href="#testimoni" class="hover:text-orange-500 transition-colors">Testimoni</a>
+        <a href="#kontak" class="hover:text-orange-500 transition-colors">Kontak</a>
+      </div>
+
+      <!-- CTA Button -->
+      <a href="#kontak" class="bg-orange-500 hover:bg-orange-600 text-white font-extrabold px-6 py-3 rounded-full text-sm sm:text-base shadow-lg shadow-orange-500/25 transition-all hover:scale-105 flex items-center gap-2">
+        <span>Gabung Aksi</span>
+        <span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs">➔</span>
+      </a>
+    </nav>
+
+    <!-- 2. HEADER & 3. HERO SECTION (Warm Pastel Background Dalam Container) -->
+    <header id="beranda" class="bg-[#FDF6E3] px-6 sm:px-12 lg:px-16 py-12 lg:py-16 rounded-b-[2rem] border-b border-amber-100">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Teks Kiri -->
+        <div class="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-extrabold bg-amber-100 text-amber-900 border border-amber-200 shadow-sm">
+            #1 Platform Volunteer Gen Z
+          </span>
+  
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.1] tracking-tight">
+            Dari Aksi Kecil <br class="hidden sm:inline"/>
+            Untuk <span class="text-orange-500">Masa Depan!</span>
+          </h1>
+
+          <p class="text-base sm:text-xl text-slate-600 font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Temukan berbagai gerakan sosial, aksi lingkungan, dan program edukasi yang dirancang khusus agar remaja Gen Z bisa berkembang, berdampak, & membangun portofolio.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#kegiatan" class="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white font-black px-8 py-4 rounded-full shadow-lg shadow-orange-500/20 text-base sm:text-lg transition-all hover:scale-105 text-center flex items-center justify-center gap-3">
+              <span>Mulai Cari Kegiatan</span>
+              <span class="bg-white/20 p-1.5 rounded-full text-xs">🔍</span>
+            </a>
+            <a href="#tentang" class="w-full sm:w-auto bg-white hover:bg-amber-50 text-slate-800 border-2 border-amber-200 font-bold px-8 py-4 rounded-full text-base sm:text-lg transition-all text-center">
+              Pelajari Dulu
+            </a>
+          </div>
+
+          <!-- User Trust Badge -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
+            <div class="flex -space-x-2">
+              <img class="w-9 h-9 rounded-full border-2 border-white object-cover" src="https://i.pinimg.com/1200x/f1/ae/66/f1ae66dc6b283fd06cd321f2466312c6.jpg" alt="Relawan">
+              <img class="w-9 h-9 rounded-full border-2 border-white object-cover" src="https://i.pinimg.com/736x/1e/28/9c/1e289ce3559e51674218f142bdc08903.jpg" alt="Relawan">
+              <img class="w-9 h-9 rounded-full border-2 border-white object-cover" src="https://i.pinimg.com/736x/34/b7/05/34b70552a28524465b0df5b1af83f7b7.jpg" alt="Relawan">
+            </div>
+            <p class="text-xs sm:text-sm font-extrabold text-slate-800">15.000+ Relawan Remaja Sudah Bergabung</p>
+          </div>
+        </div>
+
+        <!-- Gambar Kanan (Relawan Asli) -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="w-full max-w-md lg:max-w-none bg-amber-100/70 p-5 rounded-3xl border border-amber-200/80 shadow-md relative">
+            <div class="w-full h-80 sm:h-96 rounded-2xl overflow-hidden relative shadow-inner">
+              <img src="https://i.pinimg.com/736x/0b/cb/07/0bcb077e40a779547f9274c0a747b682.jpg" alt="Relawan Gen Z" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="bg-orange-500 text-[10px] font-black uppercase px-2.5 py-1 rounded-md">Kegiatan Pekan Ini</span>
+                <p class="text-lg font-black mt-1">Aksi Tanam Pohon & Edukasi Lingkungan</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge Melayang -->
+            <div class="absolute -top-4 -right-4 bg-white p-3.5 rounded-2xl shadow-xl border border-amber-100 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 font-black text-xl flex items-center justify-center">⚡</div>
+              <div>
+                <p class="text-[10px] font-bold text-slate-400 uppercase">Kuota Terbatas</p>
+                <p class="text-xs font-black text-slate-900">150+ Aksi Aktif</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- 5. FITUR / KATEGORI KEGIATAN (GRID SYSTEM 4 KOLOM - Gambar Kegiatan Asli) -->
+    <section id="kegiatan" class="py-14 px-6 sm:px-12 lg:px-16">
+      <div class="space-y-8">
+        
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+          <div class="space-y-1">
+            <span class="text-xs font-black uppercase tracking-widest text-orange-500">Kategori Pilihan</span>
+            <h2 class="text-2xl sm:text-4xl font-black text-slate-900">Jelajahi Program Relawan</h2>
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold flex items-center justify-center text-sm transition-all">←</button>
+            <button class="w-10 h-10 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-bold flex items-center justify-center text-sm transition-all shadow-md shadow-orange-500/20">→</button>
+          </div>
+        </div>
+
+        <!-- IMPLEMENTASI KETENTUAN TUGAS: GRID SYSTEM 4 KOLOM -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Card 1: Soft Orange -->
+          <div class="bg-[#FFE5D9]/60 p-5 rounded-3xl border border-orange-200/50 hover:shadow-lg transition-all flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex justify-between items-center">
+                <span class="bg-white/90 text-orange-600 text-[10px] font-black px-2.5 py-1 rounded-full">Aktif</span>
+                <span class="text-xs font-bold text-slate-400">01</span>
+              </div>
+              <div class="w-full h-36 rounded-2xl overflow-hidden shadow-inner">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=500&q=80" alt="Eco Warriors" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-lg">Eco Warriors</h3>
+                <p class="text-xs text-slate-500 mt-1 font-medium">Aksi tanam pohon & daur ulang plastik.</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center pt-2 border-t border-orange-200/50">
+              <span class="text-xs font-extrabold text-orange-600">Sertifikat Resmi</span>
+              <button class="w-8 h-8 rounded-full bg-white text-slate-900 font-black flex items-center justify-center text-xs shadow-sm">+</button>
+            </div>
+          </div>
+
+          <!-- Card 2: Soft Yellow/Pink -->
+          <div class="bg-[#FFD6BA]/40 p-5 rounded-3xl border border-amber-200/50 hover:shadow-lg transition-all flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex justify-between items-center">
+                <span class="bg-white/90 text-amber-700 text-[10px] font-black px-2.5 py-1 rounded-full">Populer</span>
+                <span class="text-xs font-bold text-slate-400">02</span>
+              </div>
+              <div class="w-full h-36 rounded-2xl overflow-hidden shadow-inner">
+                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=500&q=80" alt="EduPintar" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-lg">EduPintar</h3>
+                <p class="text-xs text-slate-500 mt-1 font-medium">Pengajaran gratis untuk anak-anak panti.</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center pt-2 border-t border-amber-200/50">
+              <span class="text-xs font-extrabold text-amber-700">Terbuka Remaja</span>
+              <button class="w-8 h-8 rounded-full bg-white text-slate-900 font-black flex items-center justify-center text-xs shadow-sm">+</button>
+            </div>
+          </div>
+
+          <!-- Card 3: Soft Green -->
+          <div class="bg-[#E2F0CB]/60 p-5 rounded-3xl border border-emerald-200/50 hover:shadow-lg transition-all flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex justify-between items-center">
+                <span class="bg-white/90 text-emerald-700 text-[10px] font-black px-2.5 py-1 rounded-full">Baru</span>
+                <span class="text-xs font-bold text-slate-400">03</span>
+              </div>
+              <div class="w-full h-36 rounded-2xl overflow-hidden shadow-inner">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80" alt="Media Kreatif" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-lg">Media Kreatif</h3>
+                <p class="text-xs text-slate-500 mt-1 font-medium">Desain & konten kampanye NGO.</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center pt-2 border-t border-emerald-200/50">
+              <span class="text-xs font-extrabold text-emerald-700">Online & Offline</span>
+              <button class="w-8 h-8 rounded-full bg-white text-slate-900 font-black flex items-center justify-center text-xs shadow-sm">+</button>
+            </div>
+          </div>
+
+          <!-- Card 4: Soft Purple -->
+          <div class="bg-[#F3C4FB]/30 p-5 rounded-3xl border border-purple-200/50 hover:shadow-lg transition-all flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex justify-between items-center">
+                <span class="bg-white/90 text-purple-700 text-[10px] font-black px-2.5 py-1 rounded-full">Urgent</span>
+                <span class="text-xs font-bold text-slate-400">04</span>
+              </div>
+              <div class="w-full h-36 rounded-2xl overflow-hidden shadow-inner">
+                <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=500&q=80" alt="Aksi Bencana" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-lg">Tanggap Bencana</h3>
+                <p class="text-xs text-slate-500 mt-1 font-medium">Penggalangan dana & bantuan logistik.</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center pt-2 border-t border-purple-200/50">
+              <span class="text-xs font-extrabold text-purple-700">Aksi Cepat</span>
+              <button class="w-8 h-8 rounded-full bg-white text-slate-900 font-black flex items-center justify-center text-xs shadow-sm">+</button>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </section>
+
+    <!-- 4. TENTANG (ABOUT SECTION) -->
+    <section id="tentang" class="py-14 px-6 sm:px-12 lg:px-16 bg-[#FDF6E3]/60 border-t border-amber-100">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="w-full max-w-sm h-80 rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80" alt="Komunitas YouthForge" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-5">
+          <span class="text-xs font-bold uppercase tracking-widest text-orange-500">Mengenal YouthForge</span>
+          <h2 class="text-3xl font-black text-slate-900 leading-tight">
+            Menyediakan Ruang Positif Bagi Generasi Proaktif
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed font-medium">
+            YouthForge hadir untuk menjembatani semangat tinggi Gen Z dengan kebutuhan berbagai organisasi sosial. Kami memastikan seluruh kegiatan terstruktur rapi, aman, dan dapat memberikan dampak nyata bagi pengembangan portofolio kamu[cite: 2].
+          </p>
+
+          <div class="grid grid-cols-3 gap-4 pt-2">
+            <div class="bg-white p-4 rounded-2xl border border-amber-100 text-center shadow-sm">
+              <p class="text-2xl font-black text-orange-500">200+</p>
+              <p class="text-[10px] font-bold text-slate-400 uppercase mt-0.5">Kegiatan</p>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-amber-100 text-center shadow-sm">
+              <p class="text-2xl font-black text-slate-900">15K+</p>
+              <p class="text-[10px] font-bold text-slate-400 uppercase mt-0.5">Relawan</p>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-amber-100 text-center shadow-sm">
+              <p class="text-2xl font-black text-emerald-600">98%</p>
+              <p class="text-[10px] font-bold text-slate-400 uppercase mt-0.5">Kepuasan</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. TESTIMONI SECTION -->
+    <section id="testimoni" class="py-14 px-6 sm:px-12 lg:px-16 space-y-8">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-orange-500">Testimoni</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Pengalaman Teman Relawan</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div class="bg-slate-50/80 p-6 rounded-3xl border border-slate-100 space-y-3">
+          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed italic">
+            "Proses pendaftarannya praktis banget! Desain websitenya segar dan bikin betah milih-milih kegiatan volunteer yang pas."
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <img class="w-10 h-10 rounded-full object-cover border-2 border-orange-400" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Anisa">
+            <div>
+              <h4 class="font-bold text-slate-900 text-xs">Anisa Nurul</h4>
+              <p class="text-[10px] text-slate-400">Siswa SMA / Relawan EduPintar</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-50/80 p-6 rounded-3xl border border-slate-100 space-y-3">
+          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed italic">
+            "Bisa nambah koneksi baru se-Indonesia dan dapet sertifikat resmi buat portofolio pendaftaran kampus!"
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <img class="w-10 h-10 rounded-full object-cover border-2 border-orange-400" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=100&q=80" alt="Rian">
+            <div>
+              <h4 class="font-bold text-slate-900 text-xs">Rian Pratama</h4>
+              <p class="text-[10px] text-slate-400">Mahasiswa / Relawan Eco Warriors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FORM PENDAFTARAN / SUBSCRIPTION -->
+    <section id="kontak" class="p-6 sm:p-10 bg-[#FDF6E3]">
+      <div class="bg-orange-500 rounded-3xl p-8 sm:p-12 text-center text-white space-y-6 shadow-xl max-w-4xl mx-auto">
+        <h2 class="text-2xl sm:text-4xl font-black">Langganan Info Volunteer Terbaru</h2>
+        <p class="text-amber-100 text-xs sm:text-sm max-w-md mx-auto">
+          Dapatkan informasi pendaftaran kegiatan relawan terupdate langsung ke email kamu setiap minggunya.
+        </p>
+
+        <form onsubmit="return false;" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input 
+            type="email" 
+            placeholder="Ketik email kamu..." 
+            class="w-full px-5 py-3.5 rounded-full bg-white text-slate-800 placeholder-slate-400 focus:outline-none text-xs sm:text-sm shadow-sm"
+          >
+          <button 
+            type="button" 
+            class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white font-black px-7 py-3.5 rounded-full text-xs sm:text-sm shadow-md transition-all whitespace-nowrap"
+          >
+            Daftar Gratis
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="bg-white py-10 px-6 sm:px-12 border-t border-amber-100 text-xs text-slate-500">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div class="space-y-2">
+          <span class="text-base font-extrabold text-slate-900">Youthforge.</span>
+          <p class="text-slate-400 text-[11px] leading-relaxed">
+            Platform direktori aksi sosial dan komunitas volunteer khusus remaja Gen Z Indonesia.
+          </p>
+        </div>
+
+        <div class="space-y-1">
+          <p class="font-bold text-slate-800">Kontak</p>
+          <p>Email: halo@youthforge.id</p>
+          <p>Instagram: @youthforge.id</p>
+        </div>
+
+        <div class="space-y-1">
+          <p class="font-bold text-slate-800">Tautan Navigasi</p>
+          <div class="flex flex-col space-y-1">
+            <a href="#beranda" class="hover:text-orange-500">Beranda</a>
+            <a href="#tentang" class="hover:text-orange-500">Tentang Kami</a>
+            <a href="#kegiatan" class="hover:text-orange-500">Kategori Aksi</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center border-t border-slate-100 pt-6 text-[11px] text-slate-400">
+        &copy; 2026 YouthForge. Tugas Praktikum 3 Framework CSS (Tailwind).
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

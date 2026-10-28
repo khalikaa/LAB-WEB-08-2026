@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevConnect — Komunitas & Belajar Tech Bareng</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .nav-link.active {
+      color: #818cf8; 
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo / Header Brand -->
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-indigo-500 rounded-lg flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/30">
+            &lt;/&gt;
+          </div>
+          <span class="text-xl font-bold bg-white bg-clip-text text-transparent">
+            DevConnect
+          </span>
+        </div>
+
+        <!-- Navigasi -->
+        <div id="nav-menu" class="hidden md:flex space-x-8 text-sm font-medium">
+          <a href="#hero" class="nav-link active text-slate-300 hover:text-indigo-400 transition-colors">Beranda</a>
+          <a href="#tentang" class="nav-link text-slate-300 hover:text-indigo-400 transition-colors">Tentang</a>
+          <a href="#fitur" class="nav-link text-slate-300 hover:text-indigo-400 transition-colors">Layanan & Fitur</a>
+          <a href="#testimoni" class="nav-link text-slate-300 hover:text-indigo-400 transition-colors">Testimoni</a>
+          <a href="#daftar" class="nav-link text-slate-300 hover:text-indigo-400 transition-colors">Kontak</a>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="hidden md:block">
+          <a href="#daftar" class="px-4 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-lg hover:bg-indigo-500 transition-all duration-200 shadow-md shadow-indigo-600/20">
+            Gabung Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. HEADER & 3. HERO SECTION -->
+  <section id="hero" class="relative overflow-hidden py-20 lg:py-28 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Text & CTA -->
+        <div class="text-center lg:text-left">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-6">
+            🚀 Komunitas Tech & Developer Indonesia
+          </span>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+            Akselerasi Karir Tech Kamu Bersama <span class="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">Komunitas Solid</span>
+          </h1>
+          
+          <p class="mt-6 text-base sm:text-lg text-slate-400 leading-relaxed">
+            Tempat kumpul mahasiswa, developer, dan penggiat IT untuk belajar coding, berbagi pengalaman proyek real-world, serta membangun jaringan profesional.
+          </p>
+
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="#daftar" class="w-full sm:w-auto px-8 py-3.5 text-base font-semibold text-white bg-indigo-600 rounded-xl hover:bg-indigo-500 transition-all duration-200 shadow-lg shadow-indigo-600/30 text-center">
+              Daftar Sekarang
+            </a>
+            <a href="#tentang" class="w-full sm:w-auto px-8 py-3.5 text-base font-semibold text-slate-300 bg-slate-800 border border-slate-700 rounded-xl hover:bg-slate-700 hover:text-white transition-all duration-200 text-center">
+              Pelajari Lebih Lanjut
+            </a>
+          </div>
+        </div>
+
+        <!-- Gambar Sampul -->
+        <div class="relative mx-auto w-full max-w-lg lg:max-w-none">
+          <div class="relative rounded-2xl overflow-hidden border border-slate-700/60 shadow-2xl shadow-indigo-500/10">
+            <img src="sampul" alt="Sampul DevConnect" class="w-full h-80 sm:h-96 lg:h-[450px] object-cover rounded-2xl">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TENTANG (ABOUT SECTION) -->
+  <section id="tentang" class="py-20 bg-slate-900/50 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-white sm:text-4xl">Tentang DevConnect</h2>
+        <p class="mt-4 text-slate-400 leading-relaxed">
+          DevConnect didirikan untuk menjembatani kesenjangan antara teori akademis dan kebutuhan industri digital. Kami berfokus pada kolaborasi langsung, peer-to-peer learning, dan pengerjaan proyek terbuka.
+        </p>
+      </div>
+
+      <!-- Tambahan Singkat Ringkas -->
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="p-6 bg-slate-800/60 rounded-2xl border border-slate-700/60 flex items-start space-x-4">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center shrink-0 font-bold text-lg">
+            🎯
+          </div>
+          <div>
+            <h3 class="text-white font-semibold text-base mb-1">Visi Kami</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Menciptakan ekosistem belajar yang inklusif di mana setiap individu bisa tumbuh dari pemula hingga siap terjun ke industri.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-6 bg-slate-800/60 rounded-2xl border border-slate-700/60 flex items-start space-x-4">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center shrink-0 font-bold text-lg">
+            🤝
+          </div>
+          <div>
+            <h3 class="text-white font-semibold text-base mb-1">Nilai Utama</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Keterbukaan, saling mendukung, dan penerapan ilmu secara praktis lewat proyek nyata bersama teman sebaya.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistik -->
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="p-6 bg-slate-800/40 rounded-2xl border border-slate-800">
+          <p class="text-3xl font-bold text-indigo-400">1,200+</p>
+          <p class="text-sm text-slate-400 mt-1">Anggota Aktif</p>
+        </div>
+        <div class="p-6 bg-slate-800/40 rounded-2xl border border-slate-800">
+          <p class="text-3xl font-bold text-indigo-400">45+</p>
+          <p class="text-sm text-slate-400 mt-1">Sesi Workshop</p>
+        </div>
+        <div class="p-6 bg-slate-800/40 rounded-2xl border border-slate-800">
+          <p class="text-3xl font-bold text-indigo-400">30+</p>
+          <p class="text-sm text-slate-400 mt-1">Proyek Open Source</p>
+        </div>
+        <div class="p-6 bg-slate-800/40 rounded-2xl border border-slate-800">
+          <p class="text-3xl font-bold text-indigo-400">100%</p>
+          <p class="text-sm text-slate-400 mt-1">Gratis & Terbuka</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FITUR / MANFAAT -->
+  <section id="fitur" class="py-20 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-white sm:text-4xl">Manfaat & Layanan Utama</h2>
+        <p class="mt-3 text-slate-400">Semua yang kamu butuhkan untuk meningkatkan skill pemrograman dan portofolio.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1: Study Jam & Live Coding -->
+        <div class="bg-slate-800/60 rounded-2xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300 overflow-hidden flex flex-col">
+          <div class="h-64 overflow-hidden">
+            <img src="study" alt="Study Jam & Live Coding" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-2">Study Jam & Live Coding</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Sesi latihan koding interaktif mingguan membahas seputar Web Development, Mobile Apps, dan UI/UX Design.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2: Kolaborasi Proyek Real -->
+        <div class="bg-slate-800/60 rounded-2xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300 overflow-hidden flex flex-col">
+          <div class="h-64 overflow-hidden">
+            <img src="kolaborasi" alt="Kolaborasi Proyek Real" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-2">Kolaborasi Proyek Real</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Bangun portofolio tim dengan mengerjakan proyek open-source dan aplikasi skala nyata yang siap dipamerkan di CV.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3: Mentoring & Code Review -->
+        <div class="bg-slate-800/60 rounded-2xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300 overflow-hidden flex flex-col">
+          <div class="h-64 overflow-hidden">
+            <img src="mentoring" alt="Mentoring & Code Review" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-2">Mentoring & Code Review</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Dapatkan masukan langsung dari senior developer terkait struktur kode, arsitektur software, dan praktik terbaik.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. TESTIMONI -->
+  <section id="testimoni" class="py-20 bg-slate-900/50 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-white sm:text-4xl">Apa Kata Mereka?</h2>
+        <p class="mt-3 text-slate-400">Pengalaman nyata dari anggota yang telah berkembang bersama DevConnect.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-slate-800/40 p-8 rounded-2xl border border-slate-800 flex flex-col justify-between">
+          <p class="text-slate-300 italic text-base leading-relaxed mb-8">
+            "Melalui Study Jam DevConnect, saya akhirnya paham konsep Tailwind CSS dan framework modern. Portofolio dari komunitas ini sangat membantu saat melamar magang!"
+          </p>
+          <div class="flex items-center space-x-5">
+            <img src="perempuan" alt="Nabila Putri" class="w-20 h-20 rounded-full object-cover border-2 border-indigo-500/40 shadow-lg shadow-indigo-500/20">
+            <div>
+              <h4 class="text-white font-bold text-lg">Nabila Putri</h4>
+              <p class="text-sm text-indigo-400 font-medium">Mahasiswi Sistem Informasi</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 (src diganti jadi rizky) -->
+        <div class="bg-slate-800/40 p-8 rounded-2xl border border-slate-800 flex flex-col justify-between">
+          <p class="text-slate-300 italic text-base leading-relaxed mb-8">
+            "Kultur berbagi di komunitas ini luar biasa. Pertanyaan koding tersulit sekalipun selalu mendapat tanggapan dan solusi diskusi dari teman-teman."
+          </p>
+          <div class="flex items-center space-x-5">
+            <img src="rizky" alt="Rizky Pratama" class="w-20 h-20 rounded-full object-cover border-2 border-indigo-500/40 shadow-lg shadow-indigo-500/20">
+            <div>
+              <h4 class="text-white font-bold text-lg">Rizky Pratama</h4>
+              <p class="text-sm text-indigo-400 font-medium">Frontend Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FORM PENDAFTARAN (FULL WIDTH & SPLIT DESIGN) -->
+  <section id="daftar" class="py-24 border-b border-slate-800 bg-gradient-to-br from-slate-900 via-indigo-950/30 to-slate-900 relative overflow-hidden">
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- SISI KIRI: CTA & KEUNTUNGAN GABUNG -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+            🔥 Pendaftaran Anggota Baru
+          </span>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+            Siap Mulai Langkah Pertama Kamu?
+          </h2>
+
+          <p class="text-slate-300 leading-relaxed text-base">
+            Jangan belajar koding sendirian! Bergabunglah bersama ratusan mahasiswa & developer lainnya untuk mengasah keterampilan tech kamu.
+          </p>
+
+          <div class="space-y-4 pt-4">
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 rounded-xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 shrink-0 font-bold">
+                ✓
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">Grup WhatsApp & Discord Eksklusif</h4>
+                <p class="text-slate-400 text-sm">Diskusi koding, tanya jawab error, dan info lowongan kerja harian.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 rounded-xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 shrink-0 font-bold">
+                ✓
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">Akses Workshop & Material Gratis</h4>
+                <p class="text-slate-400 text-sm">Ikuti sesi webinar rutin dan akses rekaman modul kapan saja.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 rounded-xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 shrink-0 font-bold">
+                ✓
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">Sertifikat & Proyek Portofolio</h4>
+                <p class="text-slate-400 text-sm">Kerjakan proyek nyata dan perkuat profil LinkedIn kamu.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SISI KANAN: FORMULIR INTERAKTIF DENGAN FOCUS BIRU LANGSUNG -->
+        <div class="lg:col-span-7">
+          <div class="bg-slate-800/80 backdrop-blur-xl p-8 sm:p-12 rounded-3xl border border-slate-700/60 shadow-2xl shadow-indigo-950/50">
+            <h3 class="text-2xl font-bold text-white mb-2">Formulir Pendaftaran</h3>
+            <p class="text-slate-400 text-sm mb-8">Lengkapi data diri kamu di bawah ini untuk menerima undangan komunitas.</p>
+
+            <form action="#" method="POST" class="space-y-6" onsubmit="event.preventDefault();">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="name" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Nama Lengkap</label>
+                  <input type="text" id="name" placeholder="Contoh: Budi Santoso" class="w-full px-4 py-3.5 bg-slate-900/90 border border-slate-700 rounded-xl text-slate-100 placeholder-slate-500 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/40 text-sm transition-all">
+                </div>
+
+                <div>
+                  <label for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Alamat Email</label>
+                  <input type="email" id="email" placeholder="nama@email.com" class="w-full px-4 py-3.5 bg-slate-900/90 border border-slate-700 rounded-xl text-slate-100 placeholder-slate-500 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/40 text-sm transition-all">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="whatsapp" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Nomor WhatsApp</label>
+                  <input type="tel" id="whatsapp" placeholder="081234567890" class="w-full px-4 py-3.5 bg-slate-900/90 border border-slate-700 rounded-xl text-slate-100 placeholder-slate-500 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/40 text-sm transition-all">
+                </div>
+
+                <div>
+                  <label for="role" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Minat Utama</label>
+                  <select id="role" class="w-full px-4 py-3.5 bg-slate-900/90 border border-slate-700 rounded-xl text-slate-100 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/40 text-sm transition-all">
+                    <option value="web">Web Development (Frontend/Backend)</option>
+                    <option value="mobile">Mobile App Development</option>
+                    <option value="uiux">UI/UX Design</option>
+                    <option value="data">Data Science / AI</option>
+                    <option value="other">Lainnya</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="message" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Pesan / Harapan Bergabung (Opsional)</label>
+                <textarea id="message" rows="3" placeholder="Apa tujuan atau topik yang ingin kamu pelajari di DevConnect?" class="w-full px-4 py-3.5 bg-slate-900/90 border border-slate-700 rounded-xl text-slate-100 placeholder-slate-500 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/40 text-sm transition-all"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 px-6 text-base font-semibold text-white bg-gradient-to-r from-indigo-600 to-indigo-500 rounded-xl hover:from-indigo-500 hover:to-indigo-400 transition-all duration-200 shadow-xl shadow-indigo-600/30 flex items-center justify-center space-x-2">
+                <span>Kirim Pendaftaran & Gabung Grup</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FOOTER -->
+  <footer class="py-12 bg-slate-950 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <span class="text-lg font-bold text-white">DevConnect</span>
+          <p class="mt-2 text-xs text-slate-500 leading-relaxed">
+            Wadah kolaborasi dan pembelajaran teknologi terbuka untuk generasi digital masa depan.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-xs uppercase tracking-wider">Tautan Pintas</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#tentang" class="hover:text-indigo-400 transition-colors">Tentang Kami</a></li>
+            <li><a href="#fitur" class="hover:text-indigo-400 transition-colors">Program & Layanan</a></li>
+            <li><a href="#daftar" class="hover:text-indigo-400 transition-colors">Formulir Pendaftaran</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-xs uppercase tracking-wider">Kontak & Media Sosial</h4>
+          <p class="text-xs text-slate-500 mb-2">Email: halo@devconnect.id</p>
+          <div class="flex space-x-4 text-xs">
+            <a href="#" class="hover:text-indigo-400 transition-colors">Instagram</a>
+            <a href="#" class="hover:text-indigo-400 transition-colors">LinkedIn</a>
+            <a href="#" class="hover:text-indigo-400 transition-colors">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+        <p>&copy; 2026 DevConnect. Seluruh hak cipta dilindungi.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="hover:text-slate-400 transition-colors">Kebijakan Privasi</a>
+          <a href="#" class="hover:text-slate-400 transition-colors">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

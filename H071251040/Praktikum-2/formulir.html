@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raja Ampat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Wisata Alam Raja Ampat</h1>
+    <nav>            
+        <a href="index.html"> Beranda</a>
+        |<a href="galeri.html">Galeri</a>
+        |<a href="daftaraktivitas.html">Aktivitas</a>   
+        |<a href="info_lokasi.html"> Lokasi</a>
+        |<a href="tabel_informasi.html">Informasi </a>
+        |<a href="formulir.html">Reservasi</a>
+        |<a href="mulmed.html">Multi Media</a>
+    </nav>
+    <hr>
+    <section>
+        <h2>Saatnya Anda untuk Mengunjungi Raja Ampat Bersama Kami</h2>
+        <p>Nikmati pengalaman berwisata dengan nyaman, aman dan terpercaya bersama kami, segera amankan tiket anda dengan melakukan reservasi!</p>
+        <form action="#">
+            <p><strong>Data Pelanggan:</strong></p>
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" placeholder="Ketik nama" required>
+                <br><br>
+                <label for="email">Alamat Email:</label>
+                <input type="text" id="email" name="email" placeholder="contoh@gmail.com" required>
+                <br><br>
+                <label for="telepon">Kontak WA:</label>
+                <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxx" required>
+                <br><br>
+                <label>Jenis Kelamin:</label>
+                <div>
+                    <label class="radio-group">
+                        <input type="radio" id="pria" name="gender" value="pria"> Laki-laki
+                    </label>
+                    <label class="radio-group">
+                        <input type="radio" id="wanita" name="gender" value="wanita"> Perempuan
+                    </label>
+                </div>
+                <br><br>
+            <p> <strong>Detail Reservasi Tiket:</strong></p>
+              <label for="kategori">Kategori Wisatawan:</label><br>
+                <select id="kategori" name="kategori">
+                    <option value="domestik">Wisatawan Domestik (± Rp 500.000)</option>
+                    <option value="mancanegara">Wisatawan Mancanegara (± Rp 1.000.000)</option>
+                </select>
+                <br><br>
+            <label for="jumlah_tiket">Jumlah Tiket (Orang):</label><br>
+            <input type="number" id="jumlah_tiket" name="jumlah_tiket" min="1" max="50" value="1" required>
+            <br><br>
+            <label for="tanggal">Tanggal Kunjungan:</label><br>
+            <input type="date" id="tanggal" name="tanggal" required>
+            <br><br>
+            <label for="identitas">Upload KTP / Paspor:</label><br>
+            <input type="file" id="identitas" name="identitas" required>
+            <br><br>
+            <label for="catatan">Catatan Tambahan / Permintaan Khusus:</label><br>
+            <textarea id="catatan" name="catatan" rows="4" cols="50" placeholder="Tuliskan catatan jika ada..."></textarea>
+            <br>
+
+        <br>
+
+       <div style="margin-top: 15px;">
+            <label class="checkbox-group">
+                <input type="checkbox" id="setuju" name="setuju">
+                Saya menyetujui ketentuan pemesanan Marine Park Pass (PIN) dan retribusi
+            </label>
+        </div>
+        <input type="submit" value="Kirim Reservasi">      
+
+            </form>
+    </section>
+     
+    <hr>
+    <footer>
+       <p>&copy;2026 Bela's Travel</p> 
+    </footer>
+</body>
+</html>

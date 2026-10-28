@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papan Tugas Tim</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: { 50: "#fcf9ef", 100: "#f6f0dc", 200: "#ece2c3", 300: "#ddd0a5" },
+            forest: { 700: "#1f5a3a", 800: "#16442c", 900: "#0f3322", 950: "#09231a" }
+          },
+          fontFamily: {
+            sans: ['"Space Grotesk"', "system-ui", "sans-serif"],
+            mono: ['"JetBrains Mono"', "ui-monospace", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f6f0dc;
+      background-image: radial-gradient(rgba(22, 68, 44, 0.16) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+  </style>
+</head>
+<body class="font-sans text-forest-900 min-h-screen">
+  <div class="max-w-7xl mx-auto p-4 md:p-8 space-y-6">
+
+    <div class="grid md:grid-cols-[380px_1fr] gap-6 items-start">
+
+      <!-- Sidebar anggota -->
+      <aside class="keras bg-forest-950 text-cream-100 rounded-2xl p-4 md:sticky md:top-8">
+        <h1 class="font-bold text-xl">Tim Marsha</h1>
+        <p class="font-mono text-[11px] tracking-widest text-lime-300/80 mt-4 mb-2">ANGGOTA</p>
+
+        <div id="wrapStatusAnggota" class="hidden">
+          <div class="flex items-center gap-2 font-mono text-xs text-lime-300 py-2">
+            <span class="w-4 h-4 rounded-sm border-2 border-lime-300 border-t-transparent animate-spin"></span>
+            <p id="statusAnggota"></p>
+          </div>
+        </div>
+        <p id="errorAnggota" class="hidden font-mono text-xs text-rose-200 bg-rose-500/20 border-l-4 border-rose-400 px-3 py-2"></p>
+        <nav id="daftarAnggota" class="space-y-1"></nav>
+      </aside>
+
+      <!-- Panel tugas -->
+      <main class="keras bg-cream-50 border border-forest-900/15 rounded-2xl p-6 min-h-[30rem]">
+        <p id="breadcrumb" class="font-mono text-xs text-forest-800/60">Tim marsha / Pilih anggota</p>
+
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mt-2">
+          <div>
+            <h2 id="judulTugas" class="text-3xl font-bold tracking-tight text-forest-900">Papan Tugas</h2>
+            <p id="ringkasan" class="font-mono text-sm text-forest-800/70 mt-1"></p>
+          </div>
+          <div id="wrapProgres" class="hidden w-full sm:w-52">
+            <div class="flex justify-between font-mono text-[11px] tracking-widest text-forest-800/70 mb-1">
+              <span>PROGRES</span><span id="persen">0%</span>
+            </div>
+            <div class="h-2 bg-forest-900/10 rounded-full overflow-hidden">
+              <div id="barProgres" class="h-full rounded-full bg-gradient-to-r from-green-600 to-lime-400 transition-all duration-500" style="width:0%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-dashed border-forest-900/20 my-5"></div>
+
+        <p id="infoAwal" class="font-mono text-sm text-forest-800/70 py-16 text-center">
+          <span class="text-green-700">&gt;</span> Klik salah satu anggota untuk melihat tugasnya<span class="kedip text-green-700"></span>
+        </p>
+
+        <div id="wrapStatusTugas" class="hidden">
+          <div class="flex items-center gap-2 font-mono text-sm text-green-700 py-6">
+            <span class="w-5 h-5 rounded-sm border-2 border-green-700 border-t-transparent animate-spin"></span>
+            <p id="statusTugas"></p>
+          </div>
+        </div>
+        <p id="errorTugas" class="hidden font-mono text-sm text-rose-700 bg-rose-50 border-l-4 border-rose-500 px-4 py-2"></p>
+
+        <div id="areaTugas" class="hidden">
+          <div class="flex flex-col md:flex-row gap-3">
+            <div class="relative md:w-56">
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-sm text-green-700">/</span>
+              <input id="cariTugas" type="text" placeholder="Cari judul tugas"
+                class="w-full bg-white border border-forest-900/20 rounded-lg pl-7 pr-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-green-700" />
+            </div>
+            <form id="formTugas" class="flex-1 flex gap-3">
+              <div class="relative flex-1">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-sm text-green-700">+</span>
+                <input id="inputJudul" type="text" placeholder="Tambah tugas baru, minimal 5 karakter"
+                  class="w-full bg-white border border-forest-900/20 rounded-lg pl-7 pr-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-green-700" />
+              </div>
+              <button id="tombolSimpan" type="submit"
+                class="bg-forest-900 text-lime-300 hover:bg-forest-800 active:translate-y-px transition font-mono text-sm font-bold rounded-lg px-5 py-2 shadow-[3px_3px_0_0_rgba(74,222,128,0.5)] disabled:opacity-60 disabled:cursor-not-allowed">Simpan</button>
+            </form>
+          </div>
+          <p id="pesanForm" class="font-mono text-rose-600 text-xs mt-2"></p>
+          <p id="notifikasi" class="font-mono text-green-700 text-xs font-bold mt-1"></p>
+
+          <p id="pesanKosong" class="font-mono text-sm text-forest-800/70 text-center py-6"></p>
+          <ul id="daftarTugas" class="mt-4 bg-white/70 border border-forest-900/10 rounded-xl divide-y divide-forest-900/10 overflow-hidden"></ul>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

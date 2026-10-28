@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Archivo Black", "Arial Black", sans-serif;
+  --font-body: "Space Grotesk", system-ui, sans-serif;
+  --color-krim: #fff8ec;
+  --color-kuning: #ffd93b;
+  --color-biru: #4f9df7;
+  --color-merah: #ff4d2e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-krim);
+  color: #000;
+}

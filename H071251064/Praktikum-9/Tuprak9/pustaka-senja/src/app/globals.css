@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-sans {
+    font-family: var(--font-body);
+  }
+
+  .font-display {
+    font-family: var(--font-judul);
+  }
+}
